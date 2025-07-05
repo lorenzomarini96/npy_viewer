@@ -39,18 +39,12 @@ python gui.py
 ```
 This will launch the GUI if everything is properly configured.
 
-
 # Usage
-## Run the viewer
-```bash
-python -m npy_viewer.main
-```
-Or from anywhere (if installed globally):
-```bash
-npy_viewer_main
-```
+After installing the package locally in editable mode, to launch the GUI viewer:
 
-
+```bash
+python gui.py
+```
 
 ## Features
 
