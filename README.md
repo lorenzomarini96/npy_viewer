@@ -4,6 +4,21 @@ A lightweight, interactive GUI tool to explore `.npy` 2D/3D medical image volume
 
 ![Python](https://img.shields.io/badge/python-3.9+-blue.svg)
 
+## Rationale & Motivation
+
+When developing machine learning models on medical imaging data in Python, the [`.npy` format](https://numpy.org/devdocs/reference/generated/numpy.lib.format.html) becomes essential.  
+While DICOM is the clinical standard for storing and exchanging medical images, deep learning models require direct access to numerical arrays — and [`NumPy`](https://numpy.org/) arrays (`.npy`) are the de facto standard for this purpose.
+
+However, this flexibility comes with a challenge: most general-purpose medical image viewers (e.g., [Mango](https://mangoviewer.com/), [ImageJ](https://imagej.net/ij/)) do not support `.npy` files.  
+This creates a blind spot in the pipeline. Before training any model, it is crucial to visually inspect the input data.  
+Any preprocessing error — such as shape mismatches, intensity clipping, or misaligned slices — can compromise the training process.
+
+**`npy_viewer` was created to fill this gap.**
+
+This lightweight and intuitive GUI allows for quick visualization of 2D and 3D `.npy` medical images.  
+It supports navigation along the three anatomical planes — axial, coronal, and sagittal — with mouse scroll interaction, pixel value overlays, and real-time min/max statistics per slice.  
+With `npy_viewer`, you can verify your datasets in seconds before launching model training — no conversion, no fuss.
+
 ### Example Views
 
 **Axial view**
@@ -18,14 +33,11 @@ A lightweight, interactive GUI tool to explore `.npy` 2D/3D medical image volume
 
 ![Sagittal](images/slice_view_sagittal.png)
 
-# Rationale & Motivation
-When developing machine learning and deep learning on medical imaging data in Python, the .npy format becomes essential. While DICOM is the clinical standard for storing and exchanging medical images, deep learning models require direct access to numerical arrays — and NumPy arrays (.npy) are the de facto standard for this purpose.
-
-However, this flexibility comes with a challenge: most general-purpose medical image viewers (e.g., Mango, ImageJ, 3D Slicer) do not support .npy files. This creates a blind spot in the pipeline. Before training any model, it is crucial to visually inspect the input data. Any preprocessing error — such as shape mismatches, intensity clipping, or misaligned slices — can compromise the training process.
-
-npy_viewer was created to fill this gap.
-
-This lightweight and intuitive GUI allows for quick visualization of 2D and 3D .npy medical images. It supports navigation along the three anatomical planes — axial, coronal, and sagittal — with mouse scroll interaction, pixel value overlays, and real-time min/max statistics per slice. With npy_viewer, you can verify your datasets in seconds before launching model training — no conversion, no fuss.
+# Benefits
+- No need to convert `.npy` → DICOM/NIfTI
+- Minimal dependencies: [`matplotlib`](https://matplotlib.org/), [`tkinter`](https://docs.python.org/3/library/tkinter.html)
+- Fast, platform-independent launch via `python gui.py`
+- Designed for deep learning workflows using [`Python`](https://www.python.org/)
 
 ## Installation
 ### 1. Clone the repository
