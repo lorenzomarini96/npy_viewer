@@ -71,8 +71,6 @@ python gui.py
 ## Project Structure
 
 ```bash
-(tf_metal) ➜  npy_viewer_project git:(main) ✗ tree
-.
 ├── README.md
 ├── gui.py
 ├── npy_viewer
