@@ -26,6 +26,11 @@ class NpySliceViewer:
 
     def __init__(self) -> None:
         self.root = tk.Tk()
+
+        # Forza la GUI in primo piano su macOS
+        self.root.lift()
+        self.root.attributes("-topmost", True)
+        self.root.after_idle(self.root.attributes, "-topmost", False)
         self.root.title("NPY Slice Viewer")
 
         self.data: Optional[np.ndarray] = None

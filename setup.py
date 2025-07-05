@@ -8,13 +8,19 @@ setup(
     author_email="lorenzo.marini.1996@gmail.com",
     packages=find_packages(),
     install_requires=[
-        "numpy==1.26.4",
-        "matplotlib==3.10.0",
+        "numpy>=1.22",
+        "matplotlib>=3.5",
     ],
     entry_points={
         "console_scripts": [
-            "npy-viewer=npy_viewer.main:main",
+            "npy_viewer=npy_viewer.main:main",
         ],
     },
-    python_requires=">=3.10",
+    license="GPLv3",
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+        "Operating System :: OS Independent",
+    ],
+    python_requires=">=3.9",
 )
