@@ -1,0 +1,1 @@
+"""npy_viewer package for visualizing .npy 2D/3D image slices."""
