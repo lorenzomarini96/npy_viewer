@@ -4,6 +4,20 @@ A lightweight, interactive GUI tool to explore `.npy` 2D/3D medical image volume
 
 ![Python](https://img.shields.io/badge/python-3.9+-blue.svg)
 
+### Example Views
+
+**Axial view**
+
+![Axial](images/slice_view_axial.png)
+
+**Coronal view**
+
+![Coronal](images/slice_view_coronal.png)
+
+**Sagittal view**
+
+![Sagittal](images/slice_view_sagittal.png)
+
 ## Installation
 ### 1. Clone the repository
 
