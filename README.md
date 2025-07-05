@@ -34,8 +34,8 @@ pip uninstall npy_viewer
 # Install in editable mode
 pip install -e .
 
-# Run the viewer
-npy_viewer
+# To launch the GUI:
+python gui.py
 ```
 This will launch the GUI if everything is properly configured.
 
@@ -63,12 +63,24 @@ npy_viewer_main
 ## Project Structure
 
 ```bash
-npy_viewer/
-├── __init__.py
-├── main.py
-├── viewer.py
-├── utils.py
-tests/
+(tf_metal) ➜  npy_viewer_project git:(main) ✗ tree
+.
+├── README.md
+├── gui.py
+├── npy_viewer
+│   ├── __init__.py
+│   ├── __pycache__
+│   │   ├── __init__.cpython-310.pyc
+│   │   ├── main.cpython-310.pyc
+│   │   ├── utils.cpython-310.pyc
+│   │   └── viewer.cpython-310.pyc
+│   ├── main.py
+│   ├── utils.py
+│   └── viewer.py
+├── pyproject.toml
+├── requirements.txt
+├── setup.py
+└── tests
     └── test_utils.py
 ```
 
